@@ -4395,7 +4395,7 @@
       (net 2 "GND") (pinfunction "RATE") (pintype "input") (tstamp 9cc98d28-58bc-4464-9d2c-d9cb5961bb22))
     (pad "16" smd roundrect (at 2.5 -4.445 180) (size 2 0.6) (layers "F.Cu" "F.Paste" "F.Mask") (roundrect_rratio 0.25)
       (net 5 "+3.3V") (pinfunction "DVDD") (pintype "power_in") (tstamp 79e8021f-68a0-4a69-826e-cbebc1372afc))
-    (model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SOP-16_3.9x9.9mm_P1.27mm.wrl"
+    (model "${KICAD6_3DMODEL_DIR}/Package_SO.3dshapes/SOIC-16_3.9x9.9mm_P1.27mm.wrl"
       (offset (xyz 0 0 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
@@ -26414,6 +26414,7 @@
   (via (at 119.3 79.75) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (net 2) (tstamp 85cf8d5f-11c4-4fbd-ab0b-2e4e9da4b4f4))
   (via (at 167.5 95) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 2) (tstamp 86929f04-8183-4467-a9ff-11d369e55a06))
   (via (at 112.4 80.95) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (net 2) (tstamp 8ec45a30-8456-4a71-8288-79ca41e507fb))
+  (via (at 157.5 100) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 2) (tstamp 99ea6697-151e-4411-9d68-160275b7891a))
   (via (at 175 92.5) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 2) (tstamp 9da04281-1e4e-4dfc-ac12-8a2644ab8df0))
   (via (at 160 95) (size 0.5) (drill 0.3) (layers "F.Cu" "B.Cu") (free) (net 2) (tstamp a159bdf6-b524-4c6f-961c-ccd97c8b5d66))
   (via (at 115.1 95.6) (size 0.8) (drill 0.4) (layers "F.Cu" "B.Cu") (free) (net 2) (tstamp a7c4eac9-20cd-4ec2-a481-25c722fc9930))

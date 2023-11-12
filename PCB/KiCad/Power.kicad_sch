@@ -1648,8 +1648,8 @@
     (pin "1" (uuid e8d8c048-901a-4d49-9e0e-377ce7cd96f1))
     (pin "2" (uuid b51527ad-590c-4894-af4e-0377b07413f2))
     (pin "3" (uuid 74d43a77-3566-4f5b-af02-f8c96e9c11f2))
-    (pin "5" (uuid c188c340-d98f-4bdb-90c7-94805e43913c))
-    (pin "5" (uuid c188c340-d98f-4bdb-90c7-94805e43913c))
+    (pin "5" (uuid c188c340-d98f-4bdb-90c7-94805e43913d))
+    (pin "5" (uuid c188c340-d98f-4bdb-90c7-94805e43913d))
     (instances
       (project "GasWeighter"
         (path "/a62c1b76-efdd-46be-a5c9-171eb6d940b6/a8210e64-0c87-4ecc-b3f5-81fa08f5877d"
