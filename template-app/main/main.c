@@ -16,37 +16,11 @@
 #define Kilo 16679106.0
 
 gpio_config_t HX711_ON;
-gptimer_handle_t gptimer = NULL;
 scale gas;
 
 
 #define ESP_INTR_FLAG_DEFAULT 0
 
-static QueueHandle_t gpio_evt_queue = NULL;
-
-static void IRAM_ATTR gpio_isr_handler(void* arg)
-{
-    uint32_t gpio_num = (uint32_t) arg;
-    xQueueSendFromISR(gpio_evt_queue, &gpio_num, NULL);
-}
-
-static void gpio_task_example(void* arg)
-{
-    uint32_t io_num;
-    gptimer_enable(gptimer);
-    for (;;) {
-        if (xQueueReceive(gpio_evt_queue, &io_num, portMAX_DELAY)) {
-           // printf("GPIO[%"PRIu32"] intr, val: %d\n", io_num, gpio_get_level(io_num));
-           if(gas.flag == 0){
-                gptimer_start(gptimer);
-                gpio_intr_disable(DOUT_PIN);
-                
-            }
-
-            vTaskDelay(10);
-        }
-    }
-}
 
 void  Print(void *pvParamters){
     while(1){
@@ -72,17 +46,13 @@ void app_main(void)
 
     gas.flag = 1;
 
-    setup_scale(&gptimer, &gas);
-
-    //create a queue to handle gpio event from isr
-    gpio_evt_queue = xQueueCreate(10, sizeof(uint32_t));
-    //start gpio task
+    setup_scale(&gas);
 
     
     //install gpio isr service
     gpio_install_isr_service(ESP_INTR_FLAG_DEFAULT);
      //hook isr handler for specific gpio pin
-    gpio_isr_handler_add(DOUT_PIN, gpio_isr_handler, (void*) DOUT_PIN);
+    gpio_isr_handler_add(DOUT_PIN, gpio_isr_handler, (void*) &gas);
 
     
     xTaskCreate(&gpio_task_example, "gpio_task_example", 2048, NULL, 10, NULL);

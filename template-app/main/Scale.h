@@ -29,9 +29,11 @@
         uint64_t event_count;
     } example_queue_element_t;
 
-    void setup_scale(gptimer_handle_t *timer, scale *scale);
-    void read_scale(gptimer_handle_t timer, scale *scale);
+    void setup_scale(scale *scale);
+    void read_scale( scale *scale);
     static bool IRAM_ATTR example_timer_on_alarm_cb_v2(gptimer_handle_t timer, const gptimer_alarm_event_data_t *edata, void *user_data);
+    void IRAM_ATTR gpio_isr_handler(void* arg);
+    void gpio_task_example(void* arg);
 
 
 #endif 
