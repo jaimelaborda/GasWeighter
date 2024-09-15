@@ -1,0 +1,4 @@
+- 2n700 N chanel mosfet used as P channel mosfet
+- Wrongg footprint SK348 diodes
+- VFB resistors HX711
+- Wrong pinout S8550

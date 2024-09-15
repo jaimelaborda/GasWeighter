@@ -58,17 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        "hole_clearance|110230000|103640000|aab113d1-abe8-4070-b2d4-7858f5f7bf56|817ddd71-a7e5-4999-8add-0983f2fab683",
-        "hole_clearance|110230000|103640000|aab113d1-abe8-4070-b2d4-7858f5f7bf56|89959ddf-2bac-4e4a-9e97-4c0fa93d84ae",
-        "hole_clearance|110230000|103840000|aab113d1-abe8-4070-b2d4-7858f5f7bf56|94996549-3086-4709-b128-d63e105a6804",
-        "hole_clearance|110230000|103840000|aab113d1-abe8-4070-b2d4-7858f5f7bf56|f479033e-0d46-4981-ad51-92b8b3bf59b5",
-        "hole_clearance|110230000|98040000|03b84f06-9ec5-4110-a7b6-21bc7d7c8790|e534607d-3786-4427-9118-9d0bedeff7eb",
-        "hole_clearance|110230000|98040000|03b84f06-9ec5-4110-a7b6-21bc7d7c8790|f00dee24-25aa-4699-bf20-7b96afad037f",
-        "hole_clearance|110230000|98240000|03b84f06-9ec5-4110-a7b6-21bc7d7c8790|3e8f6a0b-6f52-45e5-a14f-3836b07e3ec1",
-        "hole_clearance|110230000|98240000|03b84f06-9ec5-4110-a7b6-21bc7d7c8790|44b4d2a4-ee14-43e5-b822-2108efcd1fbd",
-        "starved_thermal|120737500|80000000|07866396-18a0-4f0b-b52c-98480b66eb61|398ec240-1784-45a1-82fe-8f53d9ffa2eb|F.Cu"
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -548,16 +538,16 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "",
+    "bom_export_filename": "KicADBOM",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
-      "field_delimiter": ",",
+      "field_delimiter": ";",
       "keep_line_breaks": false,
       "keep_tabs": false,
-      "name": "CSV",
+      "name": "Semicolons",
       "ref_delimiter": ",",
       "ref_range_delimiter": "",
-      "string_delimiter": "\""
+      "string_delimiter": "'"
     },
     "bom_presets": [],
     "bom_settings": {
@@ -598,11 +588,35 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Device",
+          "name": "Sim.Device",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
